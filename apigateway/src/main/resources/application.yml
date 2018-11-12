@@ -1,0 +1,23 @@
+server:
+  port: 1501
+spring:
+  application:
+    name: api-gateway
+  profiles:
+    active: test
+zuul:
+  routes:
+    api-a:
+      path: /api-a/**
+      serviceId: hello-service
+    api-b:
+      path: /api-b/**
+      serviceId: feign-consurme
+    api-a-url:
+      path: /api-a-url/**
+      url: http://localhost:8080/
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1111/eureka/
+

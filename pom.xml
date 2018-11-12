@@ -12,6 +12,8 @@
         <module>eurekaserver</module>
         <module>eurekaclient</module>
         <module>ribbonconsumer</module>
+        <module>feignconsumer</module>
+        <module>apigateway</module>
     </modules>
 
     <parent>
